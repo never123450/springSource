@@ -1,4 +1,4 @@
-package xwy.proxy;
+package xwy.proxy.jdk;
 
 public class ZhangSan implements Person {
 

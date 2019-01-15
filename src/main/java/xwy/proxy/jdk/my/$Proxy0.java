@@ -1,8 +1,8 @@
-package xwy.proxy.my;
+package xwy.proxy.jdk.my;
 
 import java.lang.reflect.Method;
 
-public final class $Proxy0 implements xwy.proxy.Person {
+public final class $Proxy0 implements xwy.proxy.jdk.Person {
 	XwyInvocationHandler h;
 
 	public $Proxy0(XwyInvocationHandler h) {
@@ -12,7 +12,7 @@ public final class $Proxy0 implements xwy.proxy.Person {
 	public java.lang.String getName() throws Throwable {
 		Method m = null;
 		try {
-			m = xwy.proxy.Person.class.getMethod("getName", new Class[] {});
+			m = xwy.proxy.jdk.Person.class.getMethod("getName", new Class[] {});
 			return (String) this.h.invoke(this, m, null);
 
 		} catch (Exception e) {
@@ -24,7 +24,7 @@ public final class $Proxy0 implements xwy.proxy.Person {
 	public void findLove() throws Throwable {
 		Method m = null;
 		try {
-			m = xwy.proxy.Person.class.getMethod("findLove", new Class[] {});
+			m = xwy.proxy.jdk.Person.class.getMethod("findLove", new Class[] {});
 			this.h.invoke(this, m, null);
 
 		} catch (Exception e) {
@@ -35,7 +35,7 @@ public final class $Proxy0 implements xwy.proxy.Person {
 	public java.lang.String getSex() throws Throwable {
 		Method m = null;
 		try {
-			m = xwy.proxy.Person.class.getMethod("getSex", new Class[] {});
+			m = xwy.proxy.jdk.Person.class.getMethod("getSex", new Class[] {});
 			return (String) this.h.invoke(this, m, null);
 
 		} catch (Exception e) {

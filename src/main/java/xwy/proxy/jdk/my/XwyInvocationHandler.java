@@ -1,4 +1,4 @@
-package xwy.proxy.my;
+package xwy.proxy.jdk.my;
 
 import java.lang.reflect.Method;
 
