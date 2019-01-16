@@ -11,7 +11,7 @@ import java.lang.reflect.Proxy;
  */
 public class MeiPo implements InvocationHandler{
 	
-	private Person target;
+	private Person target;//被代理对象的引用作为一个成员变量保存下来
 
 	//获取被代理人的个人资料
 	public Object getInstance(Person target) throws Exception{
