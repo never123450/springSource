@@ -1,4 +1,4 @@
-package xwy.sstrategy;
+package xwy.strategy;
 
 public class ObjectComparator implements Comparator{
 

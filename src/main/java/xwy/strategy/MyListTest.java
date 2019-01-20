@@ -1,4 +1,4 @@
-package xwy.sstrategy;
+package xwy.strategy;
 
 import java.util.ArrayList;
 import java.util.Collections;

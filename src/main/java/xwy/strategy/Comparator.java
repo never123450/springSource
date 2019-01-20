@@ -1,4 +1,4 @@
-package xwy.sstrategy;
+package xwy.strategy;
 
 //比较器
 public interface Comparator {
