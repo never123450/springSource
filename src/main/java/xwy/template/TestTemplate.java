@@ -10,6 +10,7 @@ public class TestTemplate {
 		Tea tea = new Tea();
 		tea.create();
 		
+		//模板模式：执行流程一样，但是中间有些步骤不一样
 		//spring JDBC 是模板模式
 		//是java规范，各个数据库厂商自己去实现
 		/*
