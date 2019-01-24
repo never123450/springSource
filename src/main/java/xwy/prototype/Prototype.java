@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Prototype implements Cloneable{
 
-	public ArrayList<String> list = new ArrayList<>();
+	public ArrayList<String> list = new ArrayList();
 	
 	@Override
 	protected Object clone() throws CloneNotSupportedException {

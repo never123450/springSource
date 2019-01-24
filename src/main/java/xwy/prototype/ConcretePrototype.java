@@ -1,6 +1,7 @@
 package xwy.prototype;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ConcretePrototype extends Prototype{
 	
@@ -10,7 +11,7 @@ public class ConcretePrototype extends Prototype{
 	private int  age;
 	private String name;
 	
-	public ArrayList<String> list = new ArrayList<>();
+	public List<String> list = new ArrayList();
 	
 	public String getName() {
 		return name;
