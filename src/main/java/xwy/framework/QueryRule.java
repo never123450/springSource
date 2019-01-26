@@ -7,7 +7,6 @@ import java.util.List;
 /**
  * QueryRule,主要功能用于构造查询条件
  * 
- * @author Tom
  */
 public final class QueryRule implements Serializable
 {
@@ -28,6 +27,8 @@ public final class QueryRule implements Serializable
 	public static final int ISNOTNULL = 12;
 	public static final int ISEMPTY = 13;
 	public static final int ISNOTEMPTY = 14;
+	
+	//逻辑规则
 	public static final int AND = 201;
 	public static final int OR = 202;
 	private List<Rule> ruleList = new ArrayList<Rule>();
@@ -229,12 +230,13 @@ public final class QueryRule implements Serializable
 		return this.propertyName;
 	}
 
+	//具体规则
 	protected class Rule implements Serializable {
 		private static final long serialVersionUID = 1L;
-		private int type;	//规则的类型
-		private String property_name;
-		private Object[] values;
-		private int andOr = AND;
+		private int type;	//规则的类型（一定是常量列表中的某一个值）
+		private String property_name;//这规则是添加给哪个属性的
+		private Object[] values;//这个规则的值是什么？
+		private int andOr = AND;//条件规则，默认用and连接
 
 		public Rule(int paramInt, String paramString) {
 			this.property_name = paramString;

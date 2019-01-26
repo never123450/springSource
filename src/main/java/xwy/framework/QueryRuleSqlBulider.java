@@ -13,8 +13,6 @@ import xwy.framework.QueryRule.Rule;
 import xwy.javax.core.common.utils.StringUtils;
 
 
-
-
 /**
  * 根据QueryRule自动构建sql语句
  * @author Tom

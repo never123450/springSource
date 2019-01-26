@@ -2,19 +2,20 @@ package xwy.javax.core.common;
 
 import java.io.Serializable;
 
+//一般作为service返回
 public class ResultMsg<T> implements Serializable {
 
 	private static final long serialVersionUID = 2635002588308355785L;
 
-	private int status;
-	private String msg;
-	private T data;
+	private int status;//状态码（每个系统都应该有自己的状态码常量）
+	private String msg;//返回结果的文字说明
+	private T data;//放返回的实际数据（可以放任何东西）
 
 	public ResultMsg() {
 	}
 	
 	public ResultMsg(int status) {
-		this.status = status;
+		this.status = status;	
 	}
 
 	public ResultMsg(int status, String msg) {

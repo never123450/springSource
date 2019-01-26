@@ -1,5 +1,6 @@
 package xwy.javax.core.common;
 
+//javax：java的扩展
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;

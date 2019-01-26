@@ -56,8 +56,9 @@ import xwy.javax.core.common.utils.StringUtils;
  *	//重写结果反转为对象的方法
  *	protected Entity mapRow(ResultSet rs, int rowNum) throws SQLException {return utils.parse(rs);}
  *
+ *写这个类是要给别人继承的，所以，这个类一般不会自己单独new处理，
+ *而且这个类里面所有的方法都一个狗设置为protected
  *
- * @author Tom
  */
 public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializable>{
 	private Logger log = Logger.getLogger(BaseDaoSupport.class);
@@ -544,8 +545,12 @@ public abstract class BaseDaoSupport<T extends Serializable, PK extends Serializ
 	 * @return 查询出的结果List
 	 */
 	protected List<T> find(QueryRule queryRule) throws Exception{
+		
+		//把用户设置的所有查询规则都带过来，接下来就要生成我们的sql语句
 		QueryRuleSqlBulider bulider = new QueryRuleSqlBulider(queryRule);
 		String ws = removeFirstAnd(bulider.getWhereSql());
+		//一般不建议直接使用select * ，而是把所有的列名全部拼接
+		//列名：利用反射机制，字段扫描出来实体类中的配置
 		String whereSql = ("".equals(ws) ? ws : (" where " + ws));
 		String sql = "select " + op.allColumn + " from " + getTableName() + whereSql;
 		Object [] values = bulider.getValues();
